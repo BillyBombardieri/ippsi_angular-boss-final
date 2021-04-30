@@ -12,6 +12,7 @@ export class FightComponent implements OnInit {
   jedi: Character = new Character();
   droide: Character = new Character();
   player: Player = new Player();
+  winner: Character;
 
 
   characters: Character[] = [
@@ -23,10 +24,7 @@ export class FightComponent implements OnInit {
     this.jedi.id = 1;
     this.jedi.name = "jedi";
     this.droide.id = 2;
-    this.droide.name = "droide";
-
-    
-    
+    this.droide.name = "droide"; 
 
     this.characters.push(this.jedi, this.droide);
     // console.info(this.jedi, this.droide);
@@ -37,13 +35,37 @@ export class FightComponent implements OnInit {
     console.info(value);
     this.player.selectedCharacter = value;
   }
-  
-
 
   demarrerPartie()
   {
-    console.info(this.player.selectedCharacter);
     // console.info(this.player.selectedCharacter);
+    // this.fight();
+    // // console.info(this.player.selectedCharacter);
+  }
+
+  // fight() {
+  //   this.jedi.strength = Math.floor(Math.random() * 10 + 1);
+  //   //this.droide.strength = Math.floor(Math.random() * 10 + 1);
+  //   console.info("Jedi strength: ", this.jedi.strength);
+  //   console.info("Droide strength: ", this.droide.strength);
+
+  //   if (this.jedi.strength > this.droide.strength) {
+  //     // console.info("jedi gagne");
+  //     this.winner = this.jedi;
+  //   }
+  //   else if (this.jedi.strength < this.droide.strength) {
+  //     // console.info("droide gagne");
+  //     this.winner = this.droide;
+  //     console.info(this.winner);
+  //   }
+  //   else {
+  //     console.info("Egalité");
+  //   }
+  // }
+
+  stopPartie() {
+    console.info("Partie stoppée");
+    this.player = new Player();
   }
 
 }

@@ -1,7 +1,7 @@
 <p>Choose you figher !</p>
-
 <select [(ngModel)]="selectedCharacter" (change)="onChange($event.target.value)">
     <option *ngFor="let character of characters" value="{{ character.name }}">{{ character.name }}</option>
 </select>
 <button (click)="demarrerPartie()">Démarrer</button>
+<button (click)="stopPartie()">Arrêter</button>
 

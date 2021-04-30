@@ -8,4 +8,5 @@ export class Player {
   nom: string;
   cagnotte: number;
   selectedCharacter: Character;
+  mise: number;
 }
