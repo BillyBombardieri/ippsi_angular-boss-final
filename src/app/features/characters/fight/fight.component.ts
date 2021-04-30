@@ -12,7 +12,7 @@ export class FightComponent implements OnInit {
   jedi: Character = new Character();
   droide: Character = new Character();
   player: Player = new Player();
-  winner: Character;
+  winner: string;
 
 
   characters: Character[] = [
@@ -47,6 +47,7 @@ export class FightComponent implements OnInit {
   fight() {
     
     let random = Math.random();
+    this.player.mise = 10 ;
     //this.player.selectedCharacter.strength = random;
     //this.droide.strength = Math.floor(Math.random() * 10 + 1);
     // console.info("Jedi strength: ", this.player.selectedCharacter.strength);
@@ -55,12 +56,14 @@ export class FightComponent implements OnInit {
     if (random > 0.5) {
       console.info("Le personnage de type " + this.player.selectedCharacter, " du joueur a gagné");
       console.info(this.player.cagnotte);
-      this.player.cagnotte =+ (this.player.mise + 15);
+      this.player.cagnotte += (this.player.mise + 15);
       console.info(this.player.cagnotte);
+      this.winner = "player";
     }
     else {
       console.info("Le personnage de type " + this.player.selectedCharacter, " du joueur a perdu");
       this.player.cagnotte = this.player.cagnotte - this.player.mise ; 
+      this.winner = "ia";
     }
   }
 

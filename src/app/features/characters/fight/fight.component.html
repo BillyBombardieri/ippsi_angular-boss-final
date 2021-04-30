@@ -6,3 +6,6 @@
 <button (click)="demarrerPartie()">Démarrer</button>
 <button (click)="stopPartie()">Arrêter</button>
 
+<p>Vous disposez de {{ player.cagnotte }}€ </p>
+<p *ngIf="winner === 'player'">Vous avez gagné</p>
+<p *ngIf="winner === 'ia'">Vous avez perdu</p>
