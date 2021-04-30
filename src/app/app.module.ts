@@ -16,6 +16,7 @@ import { FightComponent } from './features/characters/fight/fight.component';
 import { ConnexionComponent } from './features/profil/connexion/connexion.component';
 import { AdminComponent } from './features/profil/admin/admin.component';
 import { AuthGuard } from './auth.guard';
+import { ListGamesComponent } from './features/games/list-games/list-games.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AuthGuard } from './auth.guard';
     ListArmesComponent,
     FightComponent,
     ConnexionComponent,
-    AdminComponent
+    AdminComponent,
+    ListGamesComponent
   ],
   imports: [
     BrowserModule,
