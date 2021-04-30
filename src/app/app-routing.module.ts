@@ -20,7 +20,6 @@ const routes: Routes = [
     path: 'les-armes',
     component: ListArmesComponent
   },
-  { path: '', pathMatch: 'full', redirectTo: 'connexion'},
   {
     path: 'connexion',
     component: ConnexionComponent
