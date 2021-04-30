@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Character } from 'src/app/core/models/character';
 import { Player } from 'src/app/core/models/player';
 
@@ -16,7 +16,7 @@ export class FightComponent implements OnInit {
 
   characters: Character[] = [
   ]
-
+  @Output() selectedCharacter: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
   
   ngOnInit(): void {
@@ -24,6 +24,8 @@ export class FightComponent implements OnInit {
     this.jedi.name = "jedi";
     this.droide.id = 2;
     this.droide.name = "droide";
+
+    
     
 
     this.characters.push(this.jedi, this.droide);
@@ -31,10 +33,17 @@ export class FightComponent implements OnInit {
     // console.info(this.characters);
   }
   
+  onChange(value): void {
+    console.info(value);
+    this.player.selectedCharacter = value;
+  }
+  
+
 
   demarrerPartie()
   {
-    
+    console.info(this.player.selectedCharacter);
+    // console.info(this.player.selectedCharacter);
   }
 
 }
