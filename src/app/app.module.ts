@@ -13,6 +13,9 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
 import { HomeComponent } from './features/global/home/home.component';
 import { ListArmesComponent } from './features/weapons/list-armes/list-armes.component';
 import { FightComponent } from './features/characters/fight/fight.component';
+import { ConnexionComponent } from './features/profil/connexion/connexion.component';
+import { AdminComponent } from './features/profil/admin/admin.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FightComponent } from './features/characters/fight/fight.component';
     PageNotFoundComponent,
     HomeComponent,
     ListArmesComponent,
-    FightComponent
+    FightComponent,
+    ConnexionComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
