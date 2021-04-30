@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { HomeComponent } from './features/global/home/home.component';
 import { ListArmesComponent } from './features/weapons/list-armes/list-armes.component';
+import { FightComponent } from './features/characters/fight/fight.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListArmesComponent } from './features/weapons/list-armes/list-armes.com
     AjouterArmeComponent,
     PageNotFoundComponent,
     HomeComponent,
-    ListArmesComponent
+    ListArmesComponent,
+    FightComponent
   ],
   imports: [
     BrowserModule,

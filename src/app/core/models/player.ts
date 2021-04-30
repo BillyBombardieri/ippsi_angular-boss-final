@@ -4,4 +4,5 @@
 export class Player {
   prenom: string;
   nom: string;
+  cagnotte: number;
 }

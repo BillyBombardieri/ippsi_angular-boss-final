@@ -1,0 +1,7 @@
+<p>Choose you figher !</p>
+
+<select>
+    <option *ngFor="let character of characters" value="">{{ character.name }}</option>
+</select>
+<button (click)="demarrerPartie()">Démarrer</button>
+

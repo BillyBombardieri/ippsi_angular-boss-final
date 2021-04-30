@@ -3,11 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-
     "prestart": "echo 'coucou'",
     "start": "ng serve",
     "poststart": "",
-
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
