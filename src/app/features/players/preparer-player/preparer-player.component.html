@@ -1,0 +1,11 @@
+
+Prenom : <input name="prenom" [(ngModel)]="monPlayer.prenom">
+Nom : <input name="nom" [(ngModel)]="monPlayer.nom">
+
+<button (click)="clickButton()">Générer</button>
+
+debug:<br>
+<b>{{monPlayer.prenom}}</b><br>
+<b>{{monPlayer.nom}}</b>
+
+{{ monPlayer | json}}

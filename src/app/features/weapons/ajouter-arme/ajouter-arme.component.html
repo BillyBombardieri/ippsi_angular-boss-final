@@ -1,0 +1,27 @@
+<h3>
+  Ajout d'une arme
+</h3>
+
+{{ arme | json }}
+
+<div class="row debug">
+  <div class="col input-field">
+    <input
+      placeholder="Libellé de l'arme"
+      id="idLibelle"
+      type="text"
+      class="validate"
+      name="libelle"
+      [(ngModel)]="arme.libelle"
+    >
+    <label for="idLibelle">Libellé</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn waves-effect waves-light" (click)="clickAjouter()" type="button" >
+      Ajouter une arme
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+</div>

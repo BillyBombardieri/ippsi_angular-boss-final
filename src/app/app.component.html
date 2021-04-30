@@ -1,0 +1,32 @@
+<app-menu-principal [titre]="'Le logo star wars'" (logoActive)="leLogoAEteActive($event)">
+</app-menu-principal>
+<!-- <app-menu-principal></app-menu-principal> -->
+
+<div class="content"><span>Le jeu star wars</span></div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+<!--
+
+  <h1>{{ title1 }} </h1>
+
+  <img *ngIf="afficherImage" src="https://i.pinimg.com/originals/d4/9a/b7/d49ab733cb1bde30141f55a3bb7a331b.jpg">
+
+
+  <button (click)="afficherCacherImage()">[{{ actionBoutonLibelle }} image]</button>
+
+
+  <app-choix-arme-principale></app-choix-arme-principale>
+
+  <h2>Armes secondaires</h2>
+  <label *ngFor="let arme of armesSecondaires">
+    <input type="checkbox" name="arme-secondaire" value="{{arme.id}}">
+
+    {{ arme.libelle }}
+  </label>
+
+  <app-ajouter-arme></app-ajouter-arme>
+
+  <app-preparer-player (generationPlayer)="recupererPlayer($event)"></app-preparer-player> -->
+
+</div>

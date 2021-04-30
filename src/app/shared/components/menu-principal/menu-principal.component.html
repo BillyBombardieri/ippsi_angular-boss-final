@@ -1,0 +1,10 @@
+ <nav>
+  <div class="nav-wrapper">
+    <a (click)="clickSurLogo()" href="#" class="brand-logo">{{ titre }}</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a [routerLink]="['']">Accueil</a></li>
+      <li><a href="nouvelle-arme">Création arme (pas bien)</a></li>
+      <li><a [routerLink]="['nouvelle-arme']">Création arme (bien)</a></li>
+    </ul>
+  </div>
+</nav>
