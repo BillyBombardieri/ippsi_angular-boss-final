@@ -12,22 +12,24 @@ export class FightComponent implements OnInit {
   jedi: Character = new Character();
   droide: Character = new Character();
   player: Player = new Player();
-  winner: Character;
+  winner: string;
 
 
   characters: Character[] = [
   ]
   @Output() selectedCharacter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() selectMise: EventEmitter<number> = new EventEmitter<number>();
+  
   constructor() { }
   
   ngOnInit(): void {
-    this.jedi.id = 1;
-    this.jedi.name = "jedi";
-    this.droide.id = 2;
-    this.droide.name = "droide";
+    // this.jedi.id = 1;
+    // this.jedi.name = "jedi";
+    // this.droide.id = 2;
+    // this.droide.name = "droide";
     this.player.cagnotte = 100;
 
-    this.characters.push(this.jedi, this.droide);
+    // this.characters.push(this.jedi, this.droide);
     // console.info(this.jedi, this.droide);
     // console.info(this.characters);
   }
@@ -55,18 +57,19 @@ export class FightComponent implements OnInit {
     if (random > 0.5) {
       console.info("Le personnage de type " + this.player.selectedCharacter, " du joueur a gagné");
       console.info(this.player.cagnotte);
-      this.player.cagnotte =+ (this.player.mise + 15);
+      this.player.cagnotte += (this.player.mise + 15);
       console.info(this.player.cagnotte);
+      this.winner = "player";
     }
     else {
       console.info("Le personnage de type " + this.player.selectedCharacter, " du joueur a perdu");
       this.player.cagnotte = this.player.cagnotte - this.player.mise ; 
+      this.winner = "ia";
     }
   }
 
   stopPartie() {
     console.info("Partie stoppée");
-    this.player = new Player();
+    this.player.cagnotte = 100;
   }
-
 }
