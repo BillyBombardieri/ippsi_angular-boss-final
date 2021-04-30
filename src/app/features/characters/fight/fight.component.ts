@@ -24,44 +24,45 @@ export class FightComponent implements OnInit {
     this.jedi.id = 1;
     this.jedi.name = "jedi";
     this.droide.id = 2;
-    this.droide.name = "droide"; 
+    this.droide.name = "droide";
+    this.player.cagnotte = 100;
 
     this.characters.push(this.jedi, this.droide);
     // console.info(this.jedi, this.droide);
     // console.info(this.characters);
   }
   
-  onChange(value): void {
-    console.info(value);
-    this.player.selectedCharacter = value;
-  }
+  // onChange(value): void {
+  //   // console.info(value);
+  //   this.player.selectedCharacter = value;
+  // }
 
   demarrerPartie()
   {
+    console.info(this.player.selectedCharacter);
+    this.fight();
     // console.info(this.player.selectedCharacter);
-    // this.fight();
-    // // console.info(this.player.selectedCharacter);
   }
 
-  // fight() {
-  //   this.jedi.strength = Math.floor(Math.random() * 10 + 1);
-  //   //this.droide.strength = Math.floor(Math.random() * 10 + 1);
-  //   console.info("Jedi strength: ", this.jedi.strength);
-  //   console.info("Droide strength: ", this.droide.strength);
+  fight() {
+    
+    let random = Math.random();
+    //this.player.selectedCharacter.strength = random;
+    //this.droide.strength = Math.floor(Math.random() * 10 + 1);
+    // console.info("Jedi strength: ", this.player.selectedCharacter.strength);
+    // console.info("Droide strength: ", this.droide.strength);
 
-  //   if (this.jedi.strength > this.droide.strength) {
-  //     // console.info("jedi gagne");
-  //     this.winner = this.jedi;
-  //   }
-  //   else if (this.jedi.strength < this.droide.strength) {
-  //     // console.info("droide gagne");
-  //     this.winner = this.droide;
-  //     console.info(this.winner);
-  //   }
-  //   else {
-  //     console.info("Egalité");
-  //   }
-  // }
+    if (random > 0.5) {
+      console.info("Le personnage de type " + this.player.selectedCharacter, " du joueur a gagné");
+      console.info(this.player.cagnotte);
+      this.player.cagnotte =+ (this.player.mise + 15);
+      console.info(this.player.cagnotte);
+    }
+    else {
+      console.info("Le personnage de type " + this.player.selectedCharacter, " du joueur a perdu");
+      this.player.cagnotte = this.player.cagnotte - this.player.mise ; 
+    }
+  }
 
   stopPartie() {
     console.info("Partie stoppée");
