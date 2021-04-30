@@ -18,16 +18,18 @@ export class FightComponent implements OnInit {
   characters: Character[] = [
   ]
   @Output() selectedCharacter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() selectMise: EventEmitter<number> = new EventEmitter<number>();
+  
   constructor() { }
   
   ngOnInit(): void {
-    this.jedi.id = 1;
-    this.jedi.name = "jedi";
-    this.droide.id = 2;
-    this.droide.name = "droide";
+    // this.jedi.id = 1;
+    // this.jedi.name = "jedi";
+    // this.droide.id = 2;
+    // this.droide.name = "droide";
     this.player.cagnotte = 100;
 
-    this.characters.push(this.jedi, this.droide);
+    // this.characters.push(this.jedi, this.droide);
     // console.info(this.jedi, this.droide);
     // console.info(this.characters);
   }
@@ -47,7 +49,6 @@ export class FightComponent implements OnInit {
   fight() {
     
     let random = Math.random();
-    this.player.mise = 10 ;
     //this.player.selectedCharacter.strength = random;
     //this.droide.strength = Math.floor(Math.random() * 10 + 1);
     // console.info("Jedi strength: ", this.player.selectedCharacter.strength);
@@ -69,7 +70,6 @@ export class FightComponent implements OnInit {
 
   stopPartie() {
     console.info("Partie stoppée");
-    this.player = new Player();
+    this.player.cagnotte = 100;
   }
-
 }

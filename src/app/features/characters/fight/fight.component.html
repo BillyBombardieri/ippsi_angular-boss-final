@@ -2,7 +2,12 @@
 <!-- <select [(ngModel)]="player.selectedCharacter" (change)="onChange($event.target.value)">
     <option *ngFor="let character of characters" value="{{ character }}">{{ character.name }}</option>
 </select> -->
-<input type="text" name="selectedCharacter" [(ngModel)]="player.selectedCharacter"> 
+<p> Nom du personnage 
+<input type="text" name="selectedCharacter" placeholder="NOM DU PERSONNAGE" [(ngModel)]="player.selectedCharacter"> 
+</p>
+<p> Mise 
+<input type="number" placeholder="MISE" name="selectMise" [(ngModel)]="player.mise"> 
+</p>
 <button (click)="demarrerPartie()">Démarrer</button>
 <button (click)="stopPartie()">Arrêter</button>
 
