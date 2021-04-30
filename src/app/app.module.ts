@@ -6,7 +6,7 @@ import { MenuPrincipalComponent } from './shared/components/menu-principal/menu-
 import { ChoixArmePrincipaleComponent } from './features/weapons/choix-arme-principale/choix-arme-principale.component';
 import { PreparerPlayerComponent } from './features/players/preparer-player/preparer-player.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AjouterArmeComponent } from './features/weapons/ajouter-arme/ajouter-arme.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
@@ -35,6 +35,7 @@ import { AuthGuard } from './auth.guard';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [], // pour les services sans injectable à root
